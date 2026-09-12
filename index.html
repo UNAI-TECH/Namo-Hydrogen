@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAMO Hydrogen — Supersonic Hydrogen IC Engine | Zero Carbon Mobility</title>
+  <meta name="description" content="NAMO Hydrogen develops Supersonic Hydrogen Internal Combustion Engine technology. Onboard H₂ generation from waste heat — no storage, no infrastructure, zero emissions. Patent granted, IIT validated. Founder: Fathima Ali.">
+  <meta name="keywords" content="NAMO Hydrogen, Hydrogen Engine, DSHFG, Onboard Hydrogen Generation, Clean Energy India, National Hydrogen Mission, Fathima Ali">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Floating Minimal Header with Brand, 5-Step Stepper & Briefing CTA -->
+  <header class="floating-header">
+    <div class="header-brand">
+      <div class="h2-badge">H<sub>2</sub></div>
+      <div class="brand-text-group">
+        <span class="brand-title">NAMO</span>
+        <span class="brand-sub">HYDROGEN</span>
+      </div>
+    </div>
+
+    <!-- 5-Step Parallax Page Stepper -->
+    <div class="scene-steps">
+      <div class="step-bar active" data-step="0">
+        <div class="fill"></div>
+        <span class="step-num">01</span>
+        <span class="step-label">Genesis</span>
+      </div>
+      <div class="step-bar" data-step="1">
+        <div class="fill"></div>
+        <span class="step-num">02</span>
+        <span class="step-label">Extraction</span>
+      </div>
+      <div class="step-bar" data-step="2">
+        <div class="fill"></div>
+        <span class="step-num">03</span>
+        <span class="step-label">Why NAMO</span>
+      </div>
+      <div class="step-bar" data-step="3">
+        <div class="fill"></div>
+        <span class="step-num">04</span>
+        <span class="step-label">Engine</span>
+      </div>
+      <div class="step-bar" data-step="4">
+        <div class="fill"></div>
+        <span class="step-num">05</span>
+        <span class="step-label">Founder</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-briefing-header" id="btn-open-modal">
+        <span>Request Briefing</span>
+        <span class="arrow-circle">
+          <svg width="11" height="11" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12L12 1M12 1H5M12 1V8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Master Scrolly Pin Stage (5-Page Parallax Architecture) -->
+  <div class="scroll-wrapper" id="scroll-wrapper">
+    <div class="pin-stage" id="pin-stage">
+      
+      <!-- Layer Gradient: Clean Mint Ambient Substrate -->
+      <div class="image-layer" id="layer-gradient">
+        <img src="/images/clean-gradient-bg.webp" alt="Clean Mint Gradient" class="motion-img">
+      </div>
+
+      <!-- Layer 1: Water drop ripple genesis (Scene 1) -->
+      <div class="image-layer" id="layer-1">
+        <img src="/images/hydrohero-v2.webp" alt="Genesis Water Spout" class="motion-img" id="hero-img">
+      </div>
+
+      <!-- Layer 4: Engine Integration & Cylinder Landing (Scene 4) -->
+      <div class="image-layer" id="layer-4">
+        <img src="/images/scene4-engine-drop.webp" alt="Hydrogen Engine Assembly" class="motion-img" id="engine-drop-img">
+      </div>
+
+      <!-- Layer 5: Combustion Chamber Cutaway (Scene 5) -->
+      <div class="image-layer" id="layer-5">
+        <img src="/images/scene5-engine-cutaway.webp" alt="Combustion Chamber Cutaway" class="motion-img" id="engine-cutaway-img">
+      </div>
+
+      <!-- KINETIC WATER DROPLET: Photorealistic Raytraced Frame Animation -->
+      <div class="kinetic-droplet" id="kinetic-droplet">
+        <img src="/images/droplet-isolated.webp" alt="Hero Spherical Droplet" class="droplet-img droplet-1" id="drop-1">
+        <canvas id="droplet-canvas" width="512" height="768" class="droplet-canvas"></canvas>
+        <div class="droplet-glow" id="droplet-glow"></div>
+      </div>
+
+      <!-- Hydrodynamic Particle & Fluid Wake Canvas -->
+      <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+      <!-- Minimal Bottom Scroll Prompt -->
+      <div class="scroll-hint" id="scroll-hint">
+        <div class="scroll-line"></div>
+        <span>SCROLL TO TRAVERSE THE 5 KINETIC STAGES</span>
+      </div>
+
+      <!-- =============================================================
+           SCENE UI 1 (PAGE 01): GENESIS / SUPERSONIC ZERO EMISSION
+           ============================================================= -->
+      <div class="scene-ui-layer" id="scene-ui-0">
+        <div class="scene-inner-container">
+          
+          <div class="hero-left-column">
+            <div class="hero-chip animate-badge">
+              <span class="pulse-dot"></span>
+              <span>Patent Granted · IIT Validated · Govt. of India Aligned</span>
+            </div>
+
+            <h1 class="hero-display-title">
+              Supersonic Hydrogen.<br>
+              <span class="zero-emission-text">Zero Emission.</span><br>
+              Real Deployment.
+            </h1>
+
+            <p class="hero-tagline">
+              The Engine Has Always Had the Answer.
+            </p>
+
+            <p class="hero-description">
+              For over a century, engines have wasted over 60% of their fuel energy as heat. NAMO converts that discarded thermal energy into clean hydrogen fuel — onboard, in real time.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn-primary-explore" id="btn-goto-step-1">
+                <span>EXPLORE ARCHITECTURE</span>
+                <span class="btn-arrow-icon">↓</span>
+              </button>
+              <div class="hero-spec-pill">
+                <span class="mono-label">H₂ PURITY // 99.99%</span>
+                <span class="mono-label">STORAGE // 0 PSI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bento Stats Bar -->
+          <div class="hero-stats-bento">
+            <div class="bento-stat-cell">
+              <span class="bento-stat-val">60%+</span>
+              <span class="bento-stat-lbl">Engine energy wasted as heat</span>
+            </div>
+            <div class="bento-stat-cell">
+              <span class="bento-stat-val">Onboard H₂</span>
+              <span class="bento-stat-lbl">Generated directly inside system</span>
+            </div>
+            <div class="bento-stat-cell">
+              <span class="bento-stat-val">Zero</span>
+              <span class="bento-stat-lbl">External stations required</span>
+            </div>
+            <div class="bento-stat-cell">
+              <span class="bento-stat-val">Clean H₂O</span>
+              <span class="bento-stat-lbl">Pure water vapor exhaust</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- =============================================================
+           SCENE UI 2 (PAGE 02): MOLECULAR EXTRACTION & ABOUT NAMO
+           ============================================================= -->
+      <div class="scene-ui-layer" id="scene-ui-1">
+        <div class="scene-inner-container split-layout">
+          
+          <!-- Left Column: Story & Milestones -->
+          <div class="layout-col left-col">
+            <div class="section-kicker">02 // MOLECULAR EXTRACTION & HERITAGE</div>
+            <h2 class="scene-headline">
+              Engineering Hydrogen for<br>
+              <span class="highlight-green-text">Real-World Mobility</span>
+            </h2>
+            <p class="scene-lead">
+              NAMO Hydrogen is built on more than 18 years of engineering expertise through NG Automobile Engineering. Our patented onboard technology uses recovered engine thermal energy to support cleaner, cheaper mobility.
+            </p>
+            <div class="scene-quote-box">
+              <p>"The science came first. The company followed."</p>
+            </div>
+
+            <!-- Bento Milestones List -->
+            <div class="mini-milestones-bento">
+              <div class="mini-milestone-item">
+                <span class="check-icon">✓</span>
+                <span>18+ years of automotive internal combustion research</span>
+              </div>
+              <div class="mini-milestone-item">
+                <span class="check-icon">✓</span>
+                <span>Dual Source Hydrogen Fuel Generator (DSHFG) patented</span>
+              </div>
+              <div class="mini-milestone-item">
+                <span class="check-icon">✓</span>
+                <span>Direct Supersonic Hydrogen IC Engine Integration</span>
+              </div>
+              <div class="mini-milestone-item">
+                <span class="check-icon">✓</span>
+                <span>IIT Technical Discussions & Govt. Roadmap Submissions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 4 Bento Stat Cards (Around the droplet position) -->
+          <div class="layout-col right-col stats-bento-grid">
+            
+            <div class="glass-bento-card">
+              <div class="card-metric-num">18+</div>
+              <div class="card-metric-title">Years Engineering Expertise</div>
+              <div class="card-metric-sub">NG Automobile Engineering</div>
+            </div>
+
+            <div class="glass-bento-card highlight-glow">
+              <div class="card-metric-num">2 Patents</div>
+              <div class="card-metric-title">Govt. of India Granted</div>
+              <div class="card-metric-sub">India + PCT International</div>
+            </div>
+
+            <div class="glass-bento-card highlight-lime">
+              <div class="card-metric-num">₹20<span class="unit">/kg</span></div>
+              <div class="card-metric-title">H₂ Cost Achieved</div>
+              <div class="card-metric-sub">Verified by Govt. evaluations</div>
+            </div>
+
+            <div class="glass-bento-card">
+              <div class="card-metric-num">100%</div>
+              <div class="card-metric-title">Pollution-Free Output</div>
+              <div class="card-metric-sub">Zero particulate matter, pure H₂O</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- =============================================================
+           SCENE UI 3 (PAGE 03): WHY NAMO & SUPERSONIC COMBUSTION
+           ============================================================= -->
+      <div class="scene-ui-layer" id="scene-ui-2">
+        <div class="scene-inner-container center-flank-layout">
+          
+          <div class="center-header-block">
+            <div class="section-kicker">03 // THE PARADIGM SHIFT</div>
+            <h2 class="scene-headline text-center">
+              Why NAMO Hydrogen<br>
+              <span class="highlight-green-text">Changes Everything</span>
+            </h2>
+            <p class="scene-sub-center">
+              The world waited 30 years for a trillion-dollar hydrogen refueling grid that never arrived. NAMO produces fuel onboard in real time.
+            </p>
+          </div>
+
+          <!-- Flanking Bento Cards (Left and Right of the magnified droplet) -->
+          <div class="flank-bento-wrapper">
+            
+            <!-- Left Flank -->
+            <div class="flank-column left-flank">
+              <div class="bento-advantage-card">
+                <div class="card-index">01</div>
+                <h3>No Fuel Stations Needed</h3>
+                <p>Continuous onboard generation using distilled water. Zero dependence on commercial dispensing pumps.</p>
+              </div>
+
+              <div class="bento-advantage-card">
+                <div class="card-index">02</div>
+                <h3>Zero High-Pressure Storage</h3>
+                <p>Eliminates dangerous 700-bar (10,000 PSI) carbon tanks. H₂ is generated and consumed at the exact microsecond of firing.</p>
+              </div>
+            </div>
+
+            <!-- Right Flank -->
+            <div class="flank-column right-flank">
+              <div class="bento-advantage-card">
+                <div class="card-index">03</div>
+                <h3>Existing Engine Compatible</h3>
+                <p>Adapts to existing diesel and gasoline fleets without discarding vehicle chassis or billion-dollar engine production lines.</p>
+              </div>
+
+              <div class="bento-advantage-card highlight-advantage">
+                <div class="card-index">04</div>
+                <h3>Self-Reinforcing Loop</h3>
+                <p>Under heavy loads and hill climbs, the engine emits more waste heat — directly generating more hydrogen fuel!</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom HUD Telemetry Strip -->
+          <div class="telemetry-strip-hud">
+            <div class="hud-item">
+              <span class="hud-metric">3,200 m/s</span>
+              <span class="hud-desc">Supersonic Flame Velocity</span>
+            </div>
+            <div class="hud-divider"></div>
+            <div class="hud-item">
+              <span class="hud-metric">14.7 : 1</span>
+              <span class="hud-desc">Stoichiometric H₂ Induction</span>
+            </div>
+            <div class="hud-divider"></div>
+            <div class="hud-item">
+              <span class="hud-metric">Sub-Zero / 50°C</span>
+              <span class="hud-desc">All-Climate Reliability</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- =============================================================
+           SCENE UI 4 (PAGE 04): PROPULSION ARCHITECTURE & COMPARISON
+           ============================================================= -->
+      <div class="scene-ui-layer" id="scene-ui-3">
+        <div class="scene-inner-container split-layout">
+          
+          <!-- Left Column: Powertrain & Govt Alignment -->
+          <div class="layout-col left-col">
+            <div class="section-kicker">04 // PROPULSION ARCHITECTURE</div>
+            <h2 class="scene-headline">
+              The Supersonic Hydrogen<br>
+              <span class="highlight-lime-text">Internal Combustion Engine</span>
+            </h2>
+            <p class="scene-lead">
+              The patented Dual Source High-Tech Hydrogen Fuel Generator (DSHFG) operates as a catalytic dissociation reactor directly on the vehicle block.
+            </p>
+
+            <!-- Gadkari Govt Alignment Card -->
+            <div class="govt-quote-card">
+              <div class="govt-badge-label">🇮🇳 NATIONAL GREEN HYDROGEN MISSION</div>
+              <blockquote class="govt-quote-text">
+                "Green hydrogen is our future fuel. India will not only become self-reliant in energy, but an exporter of clean green energy to the world."
+              </blockquote>
+              <cite class="govt-quote-cite">— Shri Nitin Gadkari, Hon'ble Union Minister of Road Transport & Highways</cite>
+            </div>
+
+            <div class="tech-spec-row">
+              <div class="tech-spec-box">
+                <span class="spec-v">650°C+</span>
+                <span class="spec-k">Waste Thermal Recycled</span>
+              </div>
+              <div class="tech-spec-box">
+                <span class="spec-v">&lt; 14 Mo</span>
+                <span class="spec-k">Fleet ROI Payback</span>
+              </div>
+              <div class="tech-spec-box">
+                <span class="spec-v">0%</span>
+                <span class="spec-k">Carbon Monoxide Output</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Comparative Bento Table -->
+          <div class="layout-col right-col">
+            <div class="comparison-bento-box">
+              <div class="comparison-bento-title">Clean Tech Benchmark Comparison</div>
+              
+              <div class="comp-matrix-rows">
+                
+                <div class="comp-row">
+                  <div class="comp-param">Storage Pressure</div>
+                  <div class="comp-other">700 Bar (10,000 PSI) High Risk</div>
+                  <div class="comp-namo">0 PSI (Ambient Onboard Water)</div>
+                </div>
+
+                <div class="comp-row">
+                  <div class="comp-param">Refueling Infra</div>
+                  <div class="comp-other">$2M+ per Dispensing Station</div>
+                  <div class="comp-namo">Zero Stations (Generates Onboard)</div>
+                </div>
+
+                <div class="comp-row">
+                  <div class="comp-param">Fleet Adoption</div>
+                  <div class="comp-other">Scrap Fleets ($150k+ New EV)</div>
+                  <div class="comp-namo">Direct Engine Retrofit Kit</div>
+                </div>
+
+                <div class="comp-row">
+                  <div class="comp-param">Fuel Cost</div>
+                  <div class="comp-other">₹400 - ₹800 / kg H₂</div>
+                  <div class="comp-namo">₹20 / kg Equivalent (Verified)</div>
+                </div>
+
+                <div class="comp-row">
+                  <div class="comp-param">Exhaust Byproduct</div>
+                  <div class="comp-other">Water (Fuel Cell) / Battery Waste</div>
+                  <div class="comp-namo">100% Pure Clean Steam (H₂O)</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- =============================================================
+           SCENE UI 5 (PAGE 05): THE FOUNDER & CHIEF INVENTOR (LAST PAGE)
+           ============================================================= -->
+      <div class="scene-ui-layer" id="scene-ui-4">
+        <div class="scene-inner-container founder-layout">
+          
+          <div class="founder-header-deck">
+            <div class="section-kicker kicker-founder">05 // LEADERSHIP & THE INVENTOR</div>
+            <h2 class="scene-headline text-center">
+              The Visionary Behind NAMO:<br>
+              <span class="highlight-green-text">Fathima Ali</span>
+            </h2>
+            <p class="scene-sub-center">
+              Founder & Chief Inventor of NAMO Hydrogen. Transforming thermodynamic physics into field-ready zero-carbon powertrain hardware.
+            </p>
+          </div>
+
+          <!-- Main Founder Showcase Bento Grid -->
+          <div class="founder-master-bento">
+            
+            <!-- Left Portrait & Title Card -->
+            <div class="founder-card-portrait">
+              <div class="founder-avatar-frame">
+                <div class="founder-avatar-circle">
+                  <div class="avatar-glow"></div>
+                  <span class="avatar-initials">FA</span>
+                  <div class="avatar-ring ring-outer"></div>
+                  <div class="avatar-ring ring-inner"></div>
+                </div>
+                <div class="founder-title-pill">FOUNDER & CHIEF INVENTOR</div>
+              </div>
+
+              <h3 class="founder-full-name">Fathima Ali</h3>
+              <p class="founder-org-sub">NAMO Hydrogen · Clean Energy Pioneer</p>
+              
+              <div class="founder-tags-list">
+                <span class="ftag">Thermodynamic IP Architect</span>
+                <span class="ftag">IIT Technical Lead</span>
+                <span class="ftag">Supersonic H₂ Powertrain</span>
+              </div>
+            </div>
+
+            <!-- Middle Quote & Bio Card -->
+            <div class="founder-card-narrative">
+              <div class="founder-quote-callout">
+                <span class="quote-mark-icon">“</span>
+                <p class="founder-quote-content">
+                  Every combustion engine on the planet was discarding enough thermal energy to power itself twice over. The fuel was already there. The engine just didn't know how to speak hydrogen yet.
+                </p>
+                <div class="founder-quote-byline">— Fathima Ali, Founder & Chief Inventor</div>
+              </div>
+
+              <p class="founder-bio-paragraph">
+                Under Fathima Ali’s leadership, NAMO Hydrogen has translated decades of complex automotive thermodynamic research into patented, commercially viable hardware. Her work bridges the chasm between ecological idealism and harsh commercial realities — giving fleet owners a carbon-zero propulsion pathway that delivers immediate economic savings without waiting for trillions in public hydrogen pipeline buildouts.
+              </p>
+
+              <!-- In Memoriam Tribute Strip -->
+              <div class="memoriam-tribute-box">
+                <div class="memoriam-header-line">
+                  <span class="memoriam-tag-icon">✦</span>
+                  <span class="memoriam-tag-text">IN MEMORIAM · MR. SOUNTHIRARAJAN KUMARASAMY</span>
+                </div>
+                <p class="memoriam-text">
+                  Original Inventor of the Dual Source High-Tech Hydrogen Fuel Generator (DSHFG) and Founder of NG Automobile Engineering (India) & Naripa Motor Corporation (Japan). <em>"Waste heat is not waste. It is recoverable energy."</em>
+                </p>
+                <span class="patent-citation">Patent IN 201841037958 · PCT/IN2019/050205</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Action Deck -->
+          <div class="founder-action-deck">
+            <button class="btn-briefing-large" id="btn-open-modal-2">
+              <span>REQUEST EXECUTIVE TECHNICAL BRIEFING</span>
+              <span class="arrow-circle-large">→</span>
+            </button>
+            <div class="footer-mini-links">
+              <span>NG Automobile Engineering Pvt. Ltd. (India)</span>
+              <span>·</span>
+              <span>Naripa Motor Corporation (Japan)</span>
+              <span>·</span>
+              <a href="mailto:contact@namohydrogen.com">contact@namohydrogen.com</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Executive Briefing Request Modal -->
+  <div class="modal-backdrop" id="briefing-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-close-modal">&times;</button>
+      <div class="modal-header">
+        <div class="h2-badge">H<sub>2</sub></div>
+        <h3>Request Executive Briefing</h3>
+        <p>Connect directly with NAMO Hydrogen’s technical leadership for fleet retrofits or OEM licensing.</p>
+      </div>
+      <form class="modal-form" onsubmit="event.preventDefault(); alert('Thank you. Our engineering leadership team will be in touch with you.'); document.getElementById('briefing-modal').classList.remove('open');">
+        <div class="form-row">
+          <label>Full Name</label>
+          <input type="text" placeholder="Dr. Rajesh Sharma" required>
+        </div>
+        <div class="form-row">
+          <label>Corporate Email</label>
+          <input type="email" placeholder="name@organization.com" required>
+        </div>
+        <div class="form-row">
+          <label>Organization / Fleet Operator</label>
+          <input type="text" placeholder="e.g. National Logistics Corp" required>
+        </div>
+        <div class="form-row">
+          <label>Primary Interest</label>
+          <select>
+            <option>Commercial Fleet Retrofit</option>
+            <option>OEM Powertrain Licensing</option>
+            <option>Government Transit Program</option>
+            <option>Institutional Partnership</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-modal-submit">SUBMIT BRIEFING REQUEST →</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
