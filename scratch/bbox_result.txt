@@ -1,0 +1,3 @@
+﻿<!DOCTYPE html>
+<html><head><title>Loading</title></head>
+<body>RESULT:{"imgWidth":512,"imgHeight":768,"minX":54,"maxX":456,"minY":158,"maxY":611,"width":402,"height":453,"centerX":255,"centerY":384.5,"offsetFromCenterY":0.5}</body></html>
