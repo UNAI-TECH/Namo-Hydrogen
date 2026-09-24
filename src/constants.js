@@ -9,6 +9,6 @@ export const STEP_SCROLL_TARGETS = [
   2320,  // 02 TRANSFORM (Split Cards settled - timeline 1.45)
   3920,  // 03 GENERATE (Data Orbit settled with transformed Logo - timeline 2.45)
   6320,  // 04 PROPULSION (Full Propulsion Architecture loop settled - timeline 3.95)
-  7400,  // 05 FOUNDER (Founder Showcase - timeline 4.62)
+  7900,  // 05 FOUNDER (Founder Biography - timeline 4.93)
   8800   // 06 BRIEFING (Dedicated Request Briefing Page - timeline 5.50)
 ];

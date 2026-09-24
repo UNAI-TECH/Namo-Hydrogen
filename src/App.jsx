@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Preloader from './components/Preloader';
 import FloatingHeader from './components/FloatingHeader';
 import ScrollWrapper from './components/ScrollWrapper';
 import TextLoopSection from './components/TextLoopSection';
@@ -13,6 +14,7 @@ import { STEP_SCROLL_TARGETS } from './constants';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPreloaded, setIsPreloaded] = useState(false);
 
   const { lenisRef, scrollTo } = useLenis();
   const { dropletStateRef, renderDroplet } = useDropletRenderer(lenisRef);
@@ -20,9 +22,9 @@ export default function App() {
   useParticleEngine(dropletStateRef);
   useMouseParallax();
 
-  // Prevent background scrolling while BriefingModal is open
+  // Prevent background scrolling while BriefingModal is open or during preloading
   useEffect(() => {
-    if (isModalOpen) {
+    if (isModalOpen || !isPreloaded) {
       lenisRef.current?.stop();
       document.body.style.overflow = 'hidden';
     } else {
@@ -33,7 +35,7 @@ export default function App() {
       lenisRef.current?.start();
       document.body.style.overflow = '';
     };
-  }, [isModalOpen, lenisRef]);
+  }, [isModalOpen, isPreloaded, lenisRef]);
 
   const handleStepClick = (stepIdx) => {
     const targetScroll = STEP_SCROLL_TARGETS[stepIdx] ?? (stepIdx * 1600);
@@ -72,6 +74,7 @@ export default function App() {
       />
       <TextLoopSection />
       <BriefingModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Preloader onComplete={() => setIsPreloaded(true)} />
     </>
   );
 }

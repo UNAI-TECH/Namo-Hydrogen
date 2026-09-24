@@ -2,12 +2,36 @@ import React from 'react';
 
 export default function Stage01Water({ onExplore, onOpenModal, onStepClick }) {
   const stageIcons = [
-    { num: '01', label: 'Water', icon: '💧' },
-    { num: '02', label: 'Transform', icon: '⚡' },
-    { num: '03', label: 'Generate', icon: '🔬' },
-    { num: '04', label: 'Propulsion', icon: '🚀' },
-    { num: '05', label: 'Founder', icon: '👤' },
-    { num: '06', label: 'Briefing', icon: '📋' },
+    { num: '01', label: 'Water', icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+      </svg>
+    )},
+    { num: '02', label: 'Transform', icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </svg>
+    )},
+    { num: '03', label: 'Generate', icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+      </svg>
+    )},
+    { num: '04', label: 'Propulsion', icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+      </svg>
+    )},
+    { num: '05', label: 'Founder', icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    )},
+    { num: '06', label: 'Briefing', icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/>
+      </svg>
+    )},
   ];
 
   return (
@@ -19,19 +43,22 @@ export default function Stage01Water({ onExplore, onOpenModal, onStepClick }) {
           
           {/* ═══ CENTRAL PANORAMIC BENTO VIEWPORT ═══ */}
           <div className="hero-bento-viewport">
-            {/* ── Left Vertical Floating Tool Rail ── */}
-            <div className="bento-left-tool-rail">
-              {stageIcons.map((stage, idx) => (
-                <button
-                  key={stage.num}
-                  className={`tool-rail-icon ${idx === 0 ? 'active-rail' : ''}`}
-                  data-stage={idx}
-                  onClick={() => onStepClick && onStepClick(idx)}
-                  title={`${stage.num} ${stage.label}`}
-                >
-                  <span className="rail-icon-glyph">{stage.icon}</span>
-                </button>
-              ))}
+
+
+            {/* ── Animated Ambient Glow Rings ── */}
+            <div className="hero-ambient-glow" aria-hidden="true">
+              <div className="glow-ring glow-ring-1"></div>
+              <div className="glow-ring glow-ring-2"></div>
+              <div className="glow-ring glow-ring-3"></div>
+            </div>
+
+            {/* ── Floating Molecular Orbs ── */}
+            <div className="hero-molecular-orbs" aria-hidden="true">
+              <div className="mol-orb mol-orb-1"></div>
+              <div className="mol-orb mol-orb-2"></div>
+              <div className="mol-orb mol-orb-3"></div>
+              <div className="mol-orb mol-orb-4"></div>
+              <div className="mol-orb mol-orb-5"></div>
             </div>
 
             {/* ── Giant Ethereal Background Typography ── */}
@@ -42,58 +69,6 @@ export default function Stage01Water({ onExplore, onOpenModal, onStepClick }) {
               </h1>
             </div>
 
-            {/* ── Bottom-Left Fused Organic Stats Card ── */}
-            <div className="bento-fused-card">
-              <div className="fused-card-content">
-                <h3 className="fused-card-title">Zero Storage. Pure Power.</h3>
-                <p className="fused-card-desc">
-                  No high-pressure tanks. No refueling network. Hydrogen generated onboard from ordinary water, in real time.
-                </p>
-                <div className="fused-card-stats">
-                  <div className="fused-stat">
-                    <span className="fused-stat-value">18+</span>
-                    <span className="fused-stat-label">Yrs IP</span>
-                  </div>
-                  <div className="fused-stat-chips">
-                    <span className="fused-chip">Patent Granted</span>
-                    <span className="fused-chip">IIT Validated</span>
-                    <span className="fused-chip">Govt. Aligned</span>
-                  </div>
-                </div>
-              </div>
-              <button className="fused-card-arrow" onClick={onExplore}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </button>
-            </div>
-
-            {/* ── Bottom-Right Frosted Glass Telemetry Card ── */}
-            <div className="bento-glass-card">
-              <div className="glass-card-header">
-                <span className="glass-card-kicker">DSHFG THERMODYNAMIC CORE</span>
-                <button className="glass-card-expand" onClick={onExplore}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </button>
-              </div>
-              <p className="glass-card-desc">
-                Direct Steam Hydrogen Fuel Generation — converting waste heat into clean H₂ at the point of combustion.
-              </p>
-              <div className="glass-card-specs">
-                <span className="glass-spec-badge">0 PSI Storage</span>
-                <span className="glass-spec-badge highlight-spec">99.99% Purity</span>
-                <span className="glass-spec-badge">₹20/kg Target</span>
-              </div>
-              <div className="glass-card-brand-action">
-                <div className="brand-action-circle">
-                  <img src="/images/hydro-logo.webp" alt="NAMO" className="brand-action-logo" />
-                </div>
-              </div>
-            </div>
 
           </div>
           

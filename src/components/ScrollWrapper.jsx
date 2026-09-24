@@ -40,6 +40,45 @@ export default function ScrollWrapper({ onExplore, onOpenModal, onGotoDiscuss, o
           <span>SCROLL TO EXPLORE THE TIMELINE</span>
         </div>
 
+        {/* ── Organic SVG Border Frame (Forma-style concave bottom notch) ── */}
+        <div className="hero-border-frame" id="hero-border-frame">
+          <svg viewBox="0 0 1000 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="border-glow" x="-3%" y="-3%" width="106%" height="106%">
+                <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#ffffff" floodOpacity="0.45" />
+                <feDropShadow dx="0" dy="4" stdDeviation="12" floodColor="rgba(22,163,74,0.08)" floodOpacity="0.15" />
+              </filter>
+            </defs>
+            {/* Main organic border path */}
+            <path
+              d="
+                M 0,0 L 1000,0 L 1000,600 L 0,600 Z
+                M 40,3
+                L 960,3
+                Q 997,3 997,40
+                L 997,518
+                Q 997,545 978,555
+                C 960,565 940,560 928,548
+                Q 916,536 902,548
+                C 880,566 840,580 780,588
+                Q 700,598 500,598
+                Q 300,598 220,588
+                C 160,580 120,566 98,548
+                Q 84,536 72,548
+                C 60,560 40,565 22,555
+                Q 3,545 3,518
+                L 3,40
+                Q 3,3 40,3
+                Z
+              "
+              fill="#ffffff"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              filter="url(#border-glow)"
+            />
+          </svg>
+        </div>
+
         {/* Stages 01 to 06 */}
         <Stage01Water onExplore={onExplore} onOpenModal={onOpenModal} onStepClick={onStepClick} />
         <Stage02Transform />
